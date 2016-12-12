@@ -1,6 +1,6 @@
 package coffee;
 
-public abstract class Coffee {
+public abstract class Beverage {
 	protected String size;
 	protected String sweetnessLevel;
 	protected String iced;
