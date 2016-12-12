@@ -3,23 +3,24 @@ package test;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import coffee.Beverage;
-import factory.BeverageFactory;
+
+import factory.TeaFactory;
+import tea.TeaProduct;
 
 public class CoffeeTest {
 
-	@Test
-	public void createLatteTest() {
-		BeverageFactory coffeeFactory = new BeverageFactory();
-		Beverage blackteaTest = coffeeFactory.createBlackTea();
-		assertNotNull(blackteaTest);
-	}
-	
-	@Test
-	public void createMochaTest() {
-		BeverageFactory coffeeFactory = new BeverageFactory();
-		Beverage greenteaTest = coffeeFactory.createGreenTea();
-		assertNotNull(greenteaTest);
-	}
+//	@Test
+//	public void createLatteTest() {
+//		TeaFactory coffeeFactory = new TeaFactory();
+//		TeaProduct blackteaTest = coffeeFactory.createBlackTea();
+//		assertNotNull(blackteaTest);
+//	}
+//	
+//	@Test
+//	public void createMochaTest() {
+//		TeaFactory coffeeFactory = new TeaFactory();
+//		TeaProduct greenteaTest = coffeeFactory.createGreenTea();
+//		assertNotNull(greenteaTest);
+//	}
 
 }
