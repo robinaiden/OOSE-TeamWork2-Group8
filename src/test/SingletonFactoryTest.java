@@ -7,7 +7,7 @@ import org.junit.Test;
 import factory.TeaFactory;
 import tea.TeaProduct;
 
-public class CoffeeTest {
+public class SingletonFactoryTest {
 
 //	@Test
 //	public void createLatteTest() {
