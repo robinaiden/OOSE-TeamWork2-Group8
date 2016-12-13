@@ -1,13 +1,13 @@
 package main;
 
-import Decorator.GrassJellyDecorator;
-import Decorator.PuddingDecorator;
-import Decorator.TapiocaBallDecorator;
-import Decorator.TeaComponent;
-import TemplateFactory.BlackTeaFactory;
-import TemplateFactory.GreenTeaFactory;
-import TemplateFactory.LemonTeaFactory;
-import TemplateFactory.TeaFactory;
+import decorator.GrassJellyDecorator;
+import decorator.PuddingDecorator;
+import decorator.TapiocaBallDecorator;
+import decorator.TeaComponent;
+import singleton_template_factory.BlackTeaFactory;
+import singleton_template_factory.GreenTeaFactory;
+import singleton_template_factory.LemonTeaFactory;
+import singleton_template_factory.TeaFactory;
 
 public class ShopClerk {
 

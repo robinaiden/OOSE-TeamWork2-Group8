@@ -1,6 +1,6 @@
-package TemplateFactory;
+package singleton_template_factory;
 
-import Decorator.TeaComponent;
+import decorator.TeaComponent;
 
 public abstract class TeaFactory implements TeaComponent{
 	

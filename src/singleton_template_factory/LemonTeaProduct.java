@@ -1,4 +1,4 @@
-package TemplateFactory;
+package singleton_template_factory;
 
 public class LemonTeaProduct extends TeaProduct{
 	

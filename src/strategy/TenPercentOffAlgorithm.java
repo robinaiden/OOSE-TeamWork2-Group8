@@ -1,4 +1,4 @@
-package Strategy;
+package strategy;
 
 public class TenPercentOffAlgorithm extends DiscountStrategy{
 	public void discount(){
