@@ -28,9 +28,13 @@ public class BlackTeaFactory extends TeaFactory{
 	
 	public static BlackTeaFactory getInstance() {
 		if(instance == null) {
-			instance = new BlackTeaFactory();
+			instance = newInstance();
 		}
 		return instance;
+	}
+	
+	private static BlackTeaFactory newInstance() {
+		return new BlackTeaFactory();
 	}
 	
 }
