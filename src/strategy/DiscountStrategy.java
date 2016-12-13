@@ -1,5 +1,5 @@
 package strategy;
 
-public abstract class DiscountStrategy {
-	public abstract void discount();
+public interface DiscountStrategy {
+	public void discount();
 }
