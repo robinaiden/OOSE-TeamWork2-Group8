@@ -1,12 +1,13 @@
 package TemplateFactory;
 
 public class BlackTeaFactory extends TeaFactory{
-	/*
-	public BlackTeaFactory() {
-		// TODO Auto-generated constructor stub
-		System.out.println("This is BlackTea factory");
+	
+	private static BlackTeaFactory instance = null;
+	
+	private BlackTeaFactory() {
+		System.out.println("Creating BlackTeaFactory...");
 	}
-	*/
+	
 	@Override
 	protected TeaProduct CreateTea() {
 		// TODO Auto-generated method stub
@@ -23,6 +24,13 @@ public class BlackTeaFactory extends TeaFactory{
 	public double getCost() {
 		// TODO Auto-generated method stub
 		return 20;
+	}
+	
+	public static BlackTeaFactory getInstance() {
+		if(instance == null) {
+			instance = new BlackTeaFactory();
+		}
+		return instance;
 	}
 	
 }
