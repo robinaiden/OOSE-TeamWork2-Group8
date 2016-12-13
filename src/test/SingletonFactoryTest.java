@@ -4,9 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import factory.TeaFactory;
-import tea.TeaProduct;
-
 public class SingletonFactoryTest {
 
 //	@Test
