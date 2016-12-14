@@ -17,13 +17,11 @@ public class LemonTeaProduct extends TeaProduct{
 
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
+		return "LemonTea";
 	}
 
 	@Override
 	public double getCost() {
-		// TODO Auto-generated method stub
 		return 30;
 	}
 }
