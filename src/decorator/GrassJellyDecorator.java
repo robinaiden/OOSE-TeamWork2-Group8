@@ -16,7 +16,7 @@ public class GrassJellyDecorator extends TeaDecorator{
 	}
 	
 	public double getCost() {
-		System.out.println("Cost of GrassJelly: " + 5);
+		//System.out.println("Cost of GrassJelly: " + 5);
 		return tempTea.getCost() + 5;
 	}
 }

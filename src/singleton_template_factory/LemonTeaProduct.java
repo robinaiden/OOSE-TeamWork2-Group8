@@ -14,4 +14,16 @@ public class LemonTeaProduct extends TeaProduct{
 
 	@Override
 	public void addSugar() {}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return 30;
+	}
 }

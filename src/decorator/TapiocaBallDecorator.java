@@ -16,7 +16,7 @@ public class TapiocaBallDecorator extends TeaDecorator{
 	}
 	
 	public double getCost() {
-		System.out.println("Cost of TapiocaBall: " + 5);
+		//System.out.println("Cost of TapiocaBall: " + 5);
 		return tempTea.getCost() + 5;
 	}
 	

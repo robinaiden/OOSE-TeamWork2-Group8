@@ -16,18 +16,6 @@ public class GreenTeaFactory extends TeaFactory{
 		// TODO Auto-generated method stub
 		return new GreenTeaProduct();
 	}
-
-	@Override
-	public String getDescription() {
-		// TODO Auto-generated method stub
-		return "";
-	}
-
-	@Override
-	public double getCost() {
-		// TODO Auto-generated method stub
-		return 25;
-	}
 	
 	public static GreenTeaFactory getInstance(DiscountStrategy strategy) {
 		if(instance == null) {

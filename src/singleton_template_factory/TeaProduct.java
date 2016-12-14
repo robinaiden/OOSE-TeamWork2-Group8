@@ -1,6 +1,8 @@
 package singleton_template_factory;
 
-public abstract class TeaProduct {
+import decorator.TeaComponent;
+
+public abstract class TeaProduct implements TeaComponent {
 
 	public boolean customerWantsIce = false;
 	public boolean customerWantsSugar = false;

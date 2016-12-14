@@ -16,7 +16,7 @@ public class PuddingDecorator extends TeaDecorator{
 	}
 	
 	public double getCost() {
-		System.out.println("Cost of Pudding: " + 5);
+		//System.out.println("Cost of Pudding: " + 5);
 		return tempTea.getCost() + 5;
 	}
 }
