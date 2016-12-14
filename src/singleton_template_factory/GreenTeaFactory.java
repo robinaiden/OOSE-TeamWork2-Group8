@@ -1,10 +1,13 @@
 package singleton_template_factory;
 
+import strategy.DiscountStrategy;
+
 public class GreenTeaFactory extends TeaFactory{
 	
 	private static GreenTeaFactory instance = null;
 	
-	private GreenTeaFactory() {
+	private GreenTeaFactory(DiscountStrategy strategy) {
+		super(strategy);
 		System.out.println("Creating GreenTeaFactory...");
 	}
 	
@@ -26,15 +29,15 @@ public class GreenTeaFactory extends TeaFactory{
 		return 25;
 	}
 	
-	public static GreenTeaFactory getInstance() {
+	public static GreenTeaFactory getInstance(DiscountStrategy strategy) {
 		if(instance == null) {
-			instance = newInstance();
+			instance = newInstance(strategy);
 		}
 		return instance;
 	}
 	
-	private static GreenTeaFactory newInstance() {
-		return new GreenTeaFactory();
+	private static GreenTeaFactory newInstance(DiscountStrategy strategy) {
+		return new GreenTeaFactory(strategy);
 	}
 
 }

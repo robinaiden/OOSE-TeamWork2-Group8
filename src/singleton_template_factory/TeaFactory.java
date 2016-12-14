@@ -1,11 +1,14 @@
 package singleton_template_factory;
 
 import decorator.TeaComponent;
+import strategy.DiscountStrategy;
 
 public abstract class TeaFactory implements TeaComponent{
 	
-	public TeaFactory() {
-		// TODO Auto-generated constructor stub
+	private DiscountStrategy strategy = null;
+	
+	protected TeaFactory(DiscountStrategy strategy) {
+		this.strategy = strategy;
 	}
 	
 	protected abstract TeaProduct CreateTea();
@@ -19,5 +22,10 @@ public abstract class TeaFactory implements TeaComponent{
 		teaproduct.addSugar(); 
 		teaproduct.cupTea(); 
 	}
+	
+	public void getDiscountStrategy() {
+		// 不同的策略將會得到不同的結果
+        strategy.discount();
+    }
 
 }
