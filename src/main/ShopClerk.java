@@ -22,28 +22,28 @@ public class ShopClerk {
 		
 		TeaFactory teafactory1 = BlackTeaFactory.getInstance();
 		TeaComponent aTea1 = teafactory1.teaRecipe();
-		System.out.println("Original Price: " + aTea1.getCost());
-		checkstand.add(aTea1);
+		System.out.println("Original Price : " + aTea1.getCost());
 		
 		System.out.println("Customer wants to add some Decorator:");
 		aTea1 = new TapiocaBallDecorator(aTea1);
 		aTea1 = new GrassJellyDecorator(aTea1);
-		System.out.println("Ingredients:" + aTea1.getDescription());
-		System.out.println("After Price: " + aTea1.getCost());
+		System.out.println("Ingredients : " + aTea1.getDescription());
+		System.out.println("After Price : " + aTea1.getCost());
+		checkstand.add(aTea1);
 		
 		System.out.println("---------------------------------");
 		
 		System.out.println("This is GreenTea Factory.");
 		TeaFactory teafactory2 = GreenTeaFactory.getInstance();
 		TeaComponent aTea2 = teafactory2.teaRecipe();
-		System.out.println("Original Price: " + aTea2.getCost());
+		System.out.println("Original Price : " + aTea2.getCost());
 		
 		System.out.println("Customer wants to add some Decorator:");
 		aTea2 = new TapiocaBallDecorator(aTea2);
 		aTea2 = new GrassJellyDecorator(aTea2);
 		aTea2 = new PuddingDecorator(aTea2);
-		System.out.println("Ingredients:" + aTea2.getDescription());
-		System.out.println("After Price: " + aTea2.getCost());
+		System.out.println("Ingredients : " + aTea2.getDescription());
+		System.out.println("After Price : " + aTea2.getCost());
 		checkstand.add(aTea2);
 		
 		System.out.println("---------------------------------");
@@ -56,12 +56,11 @@ public class ShopClerk {
 		System.out.println("Customer wants to add some Decorator:");
 		aTea3 = new GrassJellyDecorator(aTea3);
 		aTea3 = new PuddingDecorator(aTea3);
-		System.out.println("Ingredients:" + aTea3.getDescription());
-		System.out.println("Original Price: " + aTea3.getCost());
+		System.out.println("Ingredients : " + aTea3.getDescription());
+		System.out.println("After Price : " + aTea3.getCost());
 		checkstand.add(aTea3);
 		
-		System.out.println("---------------------------------");
-		System.out.println("收據：");
+		System.out.println("----------------收據----------------");
 		checkstand.setStrategy(new TenPercentOffAlgorithm());
 		checkstand.printBill();
 		

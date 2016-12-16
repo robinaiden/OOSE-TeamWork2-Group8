@@ -30,10 +30,10 @@ public class Checkstand {
 		while(billList.hasNext()) {
 			TeaComponent s = billList.next();
 			price += s.getCost();
-			System.out.println(s.getDescription() + "¡A" + s.getCost());
+			System.out.println(s.getDescription() + " $" + s.getCost());
 		}
-		System.out.println("Total price: " + price);
-		System.out.println("Discount price: " + strategy.discount(price));
+		System.out.println("Total price : " + price);
+		System.out.println("After price : " + strategy.discount(price));
 	}
 	
 	public boolean add(TeaComponent child) {

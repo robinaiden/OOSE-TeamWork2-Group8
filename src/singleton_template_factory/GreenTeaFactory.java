@@ -11,7 +11,6 @@ public class GreenTeaFactory extends TeaFactory{
 	
 	@Override
 	protected TeaProduct CreateTea() {
-		// TODO Auto-generated method stub
 		return new GreenTeaProduct();
 	}
 	

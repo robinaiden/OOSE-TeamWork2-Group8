@@ -1,7 +1,5 @@
 package singleton_template_factory;
 
-import strategy.DiscountStrategy;
-
 public abstract class TeaFactory {
 	
 	public boolean customerWantsIce = false;

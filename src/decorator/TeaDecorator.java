@@ -10,13 +10,11 @@ public class TeaDecorator implements TeaComponent {
 
 	@Override
 	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
+		return "";
 	}
 
 	@Override
 	public double getCost() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
