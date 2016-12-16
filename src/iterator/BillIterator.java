@@ -1,15 +1,16 @@
 package iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 import decorator.TeaComponent;
 
-public class OrderIterator implements IOrderIterator {
+public class BillIterator implements Iterator<TeaComponent> {
 	
 	private ArrayList<TeaComponent> list;
 	private int index;
 	
-	public OrderIterator(ArrayList<TeaComponent> list) {
+	public BillIterator(ArrayList<TeaComponent> list) {
         this.list = list;
         this.index = 0;
     }

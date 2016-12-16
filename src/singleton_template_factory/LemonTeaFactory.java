@@ -1,14 +1,12 @@
 package singleton_template_factory;
 
-import strategy.DiscountStrategy;
-
 public class LemonTeaFactory extends TeaFactory{
 	
-	private static LemonTeaFactory instance = null;
+	private static LemonTeaFactory lemonTeaFactory = new LemonTeaFactory();
 	public boolean customerWantsSugar() { return false; }
 	
-	private LemonTeaFactory(DiscountStrategy strategy) {
-		super(strategy);
+	private LemonTeaFactory() {
+		
 	}
 	
 	@Override
@@ -30,15 +28,8 @@ public class LemonTeaFactory extends TeaFactory{
 	@Override
 	public void addSugar() {}
 	
-	public static LemonTeaFactory getInstance(DiscountStrategy strategy) {
-		if(instance == null) {
-			instance = newInstance(strategy);
-		}
-		return instance;
-	}
-	
-	private static LemonTeaFactory newInstance(DiscountStrategy strategy) {
-		return new LemonTeaFactory(strategy);
+	public static LemonTeaFactory getInstance() {
+		return lemonTeaFactory;
 	}
 
 }

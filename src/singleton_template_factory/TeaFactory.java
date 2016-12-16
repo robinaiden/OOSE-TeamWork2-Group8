@@ -4,13 +4,8 @@ import strategy.DiscountStrategy;
 
 public abstract class TeaFactory {
 	
-	private DiscountStrategy strategy = null;
 	public boolean customerWantsIce = false;
 	public boolean customerWantsSugar = false;
-	
-	protected TeaFactory(DiscountStrategy strategy) {
-		this.strategy = strategy;
-	}
 	
 	protected abstract TeaProduct CreateTea();
 	
@@ -61,10 +56,5 @@ public abstract class TeaFactory {
 	public boolean customerWantsSugar() { 
 		return true;
 	}
-	
-	public void getDiscountStrategy() {
-		// 不同的策略將會得到不同的結果
-        strategy.discount();
-    }
 
 }

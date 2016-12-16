@@ -1,14 +1,12 @@
 package singleton_template_factory;
 
-import strategy.DiscountStrategy;
-
 public class GreenTeaFactory extends TeaFactory{
 	
-	private static GreenTeaFactory instance = null;
+	private static GreenTeaFactory greenTeaFactory = new GreenTeaFactory();
 	public boolean customerWantsIce() { return false; }
 	
-	private GreenTeaFactory(DiscountStrategy strategy) {
-		super(strategy);
+	private GreenTeaFactory() {
+		
 	}
 	
 	@Override
@@ -30,15 +28,8 @@ public class GreenTeaFactory extends TeaFactory{
 		System.out.println("	Adding Suger.");
 	}
 	
-	public static GreenTeaFactory getInstance(DiscountStrategy strategy) {
-		if(instance == null) {
-			instance = newInstance(strategy);
-		}
-		return instance;
-	}
-	
-	private static GreenTeaFactory newInstance(DiscountStrategy strategy) {
-		return new GreenTeaFactory(strategy);
+	public static GreenTeaFactory getInstance() {
+		return greenTeaFactory;
 	}
 
 }

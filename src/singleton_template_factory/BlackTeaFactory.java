@@ -1,18 +1,15 @@
 package singleton_template_factory;
 
-import strategy.DiscountStrategy;
-
 public class BlackTeaFactory extends TeaFactory{
 	
-	private static BlackTeaFactory instance = null;
+	private static BlackTeaFactory blackTeaFactory = new BlackTeaFactory();
 	
-	private BlackTeaFactory(DiscountStrategy strategy) {
-		super(strategy);
+	private BlackTeaFactory() {
+		
 	}
 	
 	@Override
 	protected TeaProduct CreateTea() {
-		// TODO Auto-generated method stub
 		return new BlackTeaProduct();
 	}
 	
@@ -31,15 +28,8 @@ public class BlackTeaFactory extends TeaFactory{
 		System.out.println("	Adding Suger.");
 	}
 
-	public static BlackTeaFactory getInstance(DiscountStrategy strategy) {
-		if(instance == null) {
-			instance = newInstance(strategy);
-		}
-		return instance;
-	}
-	
-	private static BlackTeaFactory newInstance(DiscountStrategy strategy) {
-		return new BlackTeaFactory(strategy);
+	public static BlackTeaFactory getInstance() {
+		return blackTeaFactory;
 	}
 	
 }
