@@ -1,6 +1,6 @@
 package decorator;
 
-public class GrassJellyDecorator extends TeaDecorator{
+public class GrassJellyDecorator extends TeaDecorator {
 	
 	public GrassJellyDecorator(TeaComponent newTea) {
 		super(newTea);

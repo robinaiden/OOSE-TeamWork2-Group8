@@ -5,6 +5,7 @@ import strategy.DiscountStrategy;
 public class GreenTeaFactory extends TeaFactory{
 	
 	private static GreenTeaFactory instance = null;
+	public boolean customerWantsIce() { return false; }
 	
 	private GreenTeaFactory(DiscountStrategy strategy) {
 		super(strategy);
@@ -14,6 +15,19 @@ public class GreenTeaFactory extends TeaFactory{
 	protected TeaProduct CreateTea() {
 		// TODO Auto-generated method stub
 		return new GreenTeaProduct();
+	}
+	
+	@Override
+	public void brew() {
+		System.out.println("	Brew Green Tea Bag.");
+	}
+
+	@Override
+	public void addIce() {}
+
+	@Override
+	public void addSugar() {
+		System.out.println("	Adding Suger.");
 	}
 	
 	public static GreenTeaFactory getInstance(DiscountStrategy strategy) {

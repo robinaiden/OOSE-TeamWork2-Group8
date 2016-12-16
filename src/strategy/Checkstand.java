@@ -1,11 +1,11 @@
 package strategy;
 
-public class Date {
+public class Checkstand {
 	
-	private static Date date = new Date();
+	private static Checkstand date = new Checkstand();
 	private DiscountStrategy strategy;
 	
-	private Date() {
+	private Checkstand() {
 		
 	}
 	
@@ -23,7 +23,7 @@ public class Date {
 		return strategy;
 	}
 	
-	public static Date getInstance()
+	public static Checkstand getInstance()
 	{    
 		return date;
 	}

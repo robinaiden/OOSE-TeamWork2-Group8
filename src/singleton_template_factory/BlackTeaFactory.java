@@ -15,6 +15,21 @@ public class BlackTeaFactory extends TeaFactory{
 		// TODO Auto-generated method stub
 		return new BlackTeaProduct();
 	}
+	
+	@Override
+	public void brew() {
+		System.out.println("	Brew Black Tea Bag.");
+	}
+
+	@Override
+	public void addIce() {
+		System.out.println("	Adding Ice.");
+	}
+
+	@Override
+	public void addSugar() {
+		System.out.println("	Adding Suger.");
+	}
 
 	public static BlackTeaFactory getInstance(DiscountStrategy strategy) {
 		if(instance == null) {
