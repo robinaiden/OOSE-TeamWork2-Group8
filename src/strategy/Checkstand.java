@@ -8,7 +8,9 @@ public class Checkstand {
 	
 	private static Checkstand checkstand = new Checkstand();
 	private DiscountStrategy strategy = null;
+	private BillIterator billList = null;
 	private ArrayList<TeaComponent> list = null;
+	private double price = 0;
 	
 	private Checkstand() {
 		this.list = new ArrayList<TeaComponent>();
@@ -24,11 +26,14 @@ public class Checkstand {
 	}
 
 	public void printBill() {
-		BillIterator billList = checkstand.getIterator();
+		billList = checkstand.getIterator();
 		while(billList.hasNext()) {
 			TeaComponent s = billList.next();
+			price += s.getCost();
 			System.out.println(s.getDescription() + "¡A" + s.getCost());
 		}
+		System.out.println("Total price: " + price);
+		System.out.println("Discount price: " + strategy.discount(price));
 	}
 	
 	public boolean add(TeaComponent child) {

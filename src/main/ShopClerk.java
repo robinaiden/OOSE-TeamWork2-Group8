@@ -54,7 +54,6 @@ public class ShopClerk {
 		System.out.println("Original Price: " + aTea3.getCost());
 		
 		System.out.println("Customer wants to add some Decorator:");
-		//TeaComponent aTea3 = teafactory3;
 		aTea3 = new GrassJellyDecorator(aTea3);
 		aTea3 = new PuddingDecorator(aTea3);
 		System.out.println("Ingredients:" + aTea3.getDescription());

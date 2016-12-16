@@ -1,5 +1,5 @@
 package strategy;
 
 public interface DiscountStrategy {
-	public void discount();
+	public double discount(double price);
 }
