@@ -8,7 +8,6 @@ public class LemonTeaFactory extends TeaFactory{
 	
 	private LemonTeaFactory(DiscountStrategy strategy) {
 		super(strategy);
-		System.out.println("Creating LemonTeaFactory...");
 	}
 	
 	@Override

@@ -17,11 +17,11 @@ public abstract class TeaFactory {
 	public TeaComponent orderTea() {
 		//There is Information hiding, but you can put in client.
 		TeaProduct teaproduct = CreateTea();
-		teaproduct.boilWater();
-		teaproduct.brew();
-		teaproduct.addIce();
-		teaproduct.addSugar();
-		teaproduct.cupTea();
+		teaproduct.TeaRecipe();
+//		teaproduct.brew();
+//		teaproduct.addIce();
+//		teaproduct.addSugar();
+//		teaproduct.cupTea();
 		return teaproduct;
 	}
 	

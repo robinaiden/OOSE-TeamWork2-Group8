@@ -13,12 +13,12 @@ public class Date {
         this.strategy = strategy;
     }
 	
-	public DiscountStrategy holiday() {
+	public DiscountStrategy weekend() {
 		setStrategy(new TenPercentOffAlgorithm());
 		return strategy;
 	}
 	
-	public DiscountStrategy festival() {
+	public DiscountStrategy weekday() {
 		setStrategy(new TwentyPercentOffAlgorithm());
 		return strategy;
 	}

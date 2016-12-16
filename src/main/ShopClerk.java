@@ -25,7 +25,7 @@ public class ShopClerk {
 		
 		System.out.println("This is BlackTea Factory.");
 		
-		TeaFactory teafactory1 = BlackTeaFactory.getInstance(date.holiday());
+		TeaFactory teafactory1 = BlackTeaFactory.getInstance(date.weekend());
 		TeaComponent aTea1 = teafactory1.orderTea();
 		System.out.println("Original Price: " + aTea1.getCost());
 		teafactory1.getDiscountStrategy();
@@ -41,7 +41,7 @@ public class ShopClerk {
 		System.out.println("---------------------------------");
 		
 		System.out.println("This is GreenTea Factory.");
-		TeaFactory teafactory2 = GreenTeaFactory.getInstance(date.festival());
+		TeaFactory teafactory2 = GreenTeaFactory.getInstance(date.weekday());
 		TeaComponent aTea2 = teafactory2.orderTea();
 		System.out.println("Original Price: " + aTea2.getCost());
 		teafactory2.getDiscountStrategy();
@@ -58,7 +58,7 @@ public class ShopClerk {
 		System.out.println("---------------------------------");
 		
 		System.out.println("This is LemonTea Factory.");
-		TeaFactory teafactory3 = LemonTeaFactory.getInstance(date.festival());
+		TeaFactory teafactory3 = LemonTeaFactory.getInstance(date.weekday());
 		TeaComponent aTea3 = teafactory3.orderTea();
 		System.out.println("Original Price: " + aTea3.getCost());
 		teafactory3.getDiscountStrategy();
