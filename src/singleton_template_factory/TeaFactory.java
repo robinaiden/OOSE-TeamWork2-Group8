@@ -7,7 +7,7 @@ public abstract class TeaFactory {
 	
 	protected abstract TeaProduct CreateTea();
 	
-	public final TeaProduct teaRecipe(){
+	public final TeaProduct teaRecipe() {
 		
 		//Concrete Method
 		boilWater();

@@ -14,21 +14,26 @@ import strategy.TenPercentOffAlgorithm;
 public class ShopClerk {
 
 	public static void main(String[] args) {
-		// The ConcreteHamburger object is sent to the Cheese constructor
-		// and then to the TomatoSauce
+		
+		// Get Checkstand instance. (取得收銀機物件)
 		Checkstand checkstand = Checkstand.getInstance();
 		
 		System.out.println("This is BlackTea Factory.");
-		
+		// Get BlackTeaFactory instance. (取得紅茶工廠物件)
 		TeaFactory teafactory1 = BlackTeaFactory.getInstance();
+		// Execute Template Method, then get the BlackTea instance. (執行模板方法後，會得到紅茶物件)
 		TeaComponent aTea1 = teafactory1.teaRecipe();
+		// Show the BlackTea original price.
 		System.out.println("Original Price : " + aTea1.getCost());
 		
 		System.out.println("Customer wants to add some Decorator:");
+		// Customer wants TapiocaBall. (顧客想要加珍珠)
 		aTea1 = new TapiocaBallDecorator(aTea1);
+		// Customer wants GrassJelly. (顧客想要加仙草)
 		aTea1 = new GrassJellyDecorator(aTea1);
 		System.out.println("Ingredients : " + aTea1.getDescription());
 		System.out.println("After Price : " + aTea1.getCost());
+		// Add to bill. (加入到訂單)
 		checkstand.add(aTea1);
 		
 		System.out.println("---------------------------------");
