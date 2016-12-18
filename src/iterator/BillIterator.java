@@ -34,4 +34,9 @@ public class BillIterator implements Iterator<TeaComponent> {
 		}
 	}
 	
+	@Override
+	public void remove() {
+		throw new UnsupportedOperationException();
+	}
+	
 }
