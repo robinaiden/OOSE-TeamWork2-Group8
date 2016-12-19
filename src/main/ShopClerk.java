@@ -15,7 +15,7 @@ public class ShopClerk {
 
 	public static void main(String[] args) {
 		
-		// Get Checkstand instance. (取得收銀機物件)
+		// Obtain the object of the checkstand. (取得收銀機物件)
 		Checkstand checkstand = Checkstand.getInstance();
 		
 		System.out.println("This is BlackTea Factory.");
@@ -29,7 +29,7 @@ public class ShopClerk {
 		System.out.println("Customer wants to add some Ingredients:");
 		// Customers want to add tapiocaBall. (顧客想要加珍珠)
 		aTea1 = new TapiocaBallDecorator(aTea1);
-		// Customers want to add GrassJelly. (顧客想要加仙草)
+		// Customers want to add grassJelly. (顧客想要加仙草)
 		aTea1 = new GrassJellyDecorator(aTea1);
 		// Shows those ingredients added. (顯示已加了那些配料)
 		System.out.println("Ingredients : " + aTea1.getDescription());
@@ -41,13 +41,17 @@ public class ShopClerk {
 		System.out.println("---------------------------------");
 		
 		System.out.println("This is GreenTea Factory.");
+		// Obtain the object of the green tea factory. (取得綠茶工廠物件)
 		TeaFactory teafactory2 = GreenTeaFactory.getInstance();
 		TeaComponent aTea2 = teafactory2.teaRecipe();
 		System.out.println("Original Price : " + aTea2.getCost());
 		
 		System.out.println("Customer wants to add some Ingredients:");
+		// Customers want to add tapiocaBall. (顧客想要加珍珠)
 		aTea2 = new TapiocaBallDecorator(aTea2);
+		// Customers want to add grassJelly. (顧客想要加仙草)
 		aTea2 = new GrassJellyDecorator(aTea2);
+		// Customers want to add pudding. (顧客想要加布丁)
 		aTea2 = new PuddingDecorator(aTea2);
 		System.out.println("Ingredients : " + aTea2.getDescription());
 		System.out.println("After Price : " + aTea2.getCost());
@@ -56,21 +60,24 @@ public class ShopClerk {
 		System.out.println("---------------------------------");
 		
 		System.out.println("This is LemonTea Factory.");
+		// Obtain the object of the lemon tea factory. (取得檸檬茶工廠物件)
 		TeaFactory teafactory3 = LemonTeaFactory.getInstance();
 		TeaComponent aTea3 = teafactory3.teaRecipe();
 		System.out.println("Original Price: " + aTea3.getCost());
 		
 		System.out.println("Customer wants to add some Ingredients:");
+		// Customers want to add grassJelly. (顧客想要加仙草)
 		aTea3 = new GrassJellyDecorator(aTea3);
+		// Customers want to add pudding. (顧客想要加布丁)
 		aTea3 = new PuddingDecorator(aTea3);
 		System.out.println("Ingredients : " + aTea3.getDescription());
 		System.out.println("After Price : " + aTea3.getCost());
 		checkstand.add(aTea3);
 		
 		System.out.println("----------------收據----------------");
-		// ShopClerk Choose 10% Discount Strategy. (店員選擇了10%的折扣)
+		// The clerk choose 10% discount strategy. (店員選擇了10%的折扣)
 		checkstand.setStrategy(new TenPercentOffAlgorithm());
-		// Print bill. (顯示帳單資訊)
+		// Show Bill. (顯示帳單資訊)
 		checkstand.printBill();
 		
 	}
