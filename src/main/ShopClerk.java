@@ -66,7 +66,9 @@ public class ShopClerk {
 		checkstand.add(aTea3);
 		
 		System.out.println("----------------收據----------------");
+		// ShopClerk Choose 10% Discount Strategy. (店員選擇了10%的折扣)
 		checkstand.setStrategy(new TenPercentOffAlgorithm());
+		// Print bill. (顯示帳單資訊)
 		checkstand.printBill();
 		
 	}
