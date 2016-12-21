@@ -1,6 +1,5 @@
 package test;
 
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.*;
 
@@ -12,7 +11,7 @@ public class GreenTeaFactoryTest {
 
 	@Test
 	public void testGetInstance() {
-		assertThat("The GreenTeaFactory has been created unsuccessfully.", GreenTeaFactory.getInstance(), is(notNullValue()));
+		assertThat("The GreenTeaFactory has been created unsuccessfully.", GreenTeaFactory.getInstance(), notNullValue());
 	}
 
 }

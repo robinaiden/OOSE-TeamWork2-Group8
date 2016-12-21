@@ -11,7 +11,7 @@ public class BlackTeaFactoryTest {
 	
 	@Test
 	public void testGetInstance() {
-		assertThat("The BlackTeaFactory has been created unsuccessfully.", BlackTeaFactory.getInstance(), is(notNullValue()));
+		assertThat("The BlackTeaFactory has been created unsuccessfully.", BlackTeaFactory.getInstance(), notNullValue());
 	}
 
 }
