@@ -4,7 +4,6 @@ public class PuddingDecorator extends TeaDecorator{
 	
 	public PuddingDecorator(TeaComponent newTea) {
 		super(newTea);
-		// TODO Auto-generated constructor stub
 		System.out.println("	Adding Pudding");
 	}
 	
@@ -16,7 +15,6 @@ public class PuddingDecorator extends TeaDecorator{
 	}
 	
 	public double getCost() {
-		//System.out.println("Cost of Pudding: " + 5);
 		return tempTea.getCost() + 5;
 	}
 }
