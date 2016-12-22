@@ -4,9 +4,6 @@ import decorator.GrassJellyDecorator;
 import decorator.PuddingDecorator;
 import decorator.TapiocaBallDecorator;
 import decorator.TeaComponent;
-import singleton_template_factory.BlackTeaFactory;
-import singleton_template_factory.GreenTeaFactory;
-import singleton_template_factory.LemonTeaFactory;
 import singleton_template_factory.TeaFactory;
 import strategy.Checkstand;
 import strategy.TenPercentOffAlgorithm;
@@ -18,11 +15,11 @@ public class ShopClerk {
 		// Obtain the object of the checkstand. (取得收銀機物件)
 		Checkstand checkstand = Checkstand.getInstance();
 		
-		System.out.println("This is BlackTea Factory.");
-		// Obtain the object of the black tea factory. (取得紅茶工廠物件)
-		TeaFactory teafactory1 = BlackTeaFactory.getInstance();
+		// Obtain the object of the factory. (取得工廠物件)
+		TeaFactory teaFactory = TeaFactory.getInstance();
+		
 		// After the template method is executed, a black tea object is obtained. (執行模板方法後，會得到紅茶物件)
-		TeaComponent aTea1 = teafactory1.teaRecipe();
+		TeaComponent aTea1 = teaFactory.createBlackTeaProduct();
 		// Show the basic price of black tea (顯示紅茶的基本價錢)
 		System.out.println("Original Price : " + aTea1.getCost());
 		
@@ -40,10 +37,7 @@ public class ShopClerk {
 		
 		System.out.println("---------------------------------");
 		
-		System.out.println("This is GreenTea Factory.");
-		// Obtain the object of the green tea factory. (取得綠茶工廠物件)
-		TeaFactory teafactory2 = GreenTeaFactory.getInstance();
-		TeaComponent aTea2 = teafactory2.teaRecipe();
+		TeaComponent aTea2 = teaFactory.createGreenTeaProduct();
 		System.out.println("Original Price : " + aTea2.getCost());
 		
 		System.out.println("Customer wants to add some Ingredients:");
@@ -59,10 +53,7 @@ public class ShopClerk {
 		
 		System.out.println("---------------------------------");
 		
-		System.out.println("This is LemonTea Factory.");
-		// Obtain the object of the lemon tea factory. (取得檸檬茶工廠物件)
-		TeaFactory teafactory3 = LemonTeaFactory.getInstance();
-		TeaComponent aTea3 = teafactory3.teaRecipe();
+		TeaComponent aTea3 = teaFactory.createLemonTeaProduct();
 		System.out.println("Original Price: " + aTea3.getCost());
 		
 		System.out.println("Customer wants to add some Ingredients:");
