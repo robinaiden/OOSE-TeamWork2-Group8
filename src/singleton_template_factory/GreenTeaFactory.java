@@ -24,7 +24,7 @@ public class GreenTeaFactory extends TeaFactory{
 
 	@Override
 	public void addSugar() {
-		System.out.println("	Adding Suger.");
+		System.out.println("	Adding Sugar.");
 	}
 	
 	public static GreenTeaFactory getInstance() {
