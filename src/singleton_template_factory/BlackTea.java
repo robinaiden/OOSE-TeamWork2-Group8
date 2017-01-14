@@ -1,6 +1,6 @@
 package singleton_template_factory;
 
-public class BlackTeaProduct extends TeaProduct {
+public class BlackTea extends TeaProduct {
 	
 	@Override
 	public void brew() {

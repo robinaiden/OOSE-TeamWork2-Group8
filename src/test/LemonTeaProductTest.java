@@ -5,18 +5,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import singleton_template_factory.LemonTeaProduct;
+import singleton_template_factory.LemonTea;
 
 public class LemonTeaProductTest {
 
 	@Test
 	public void testGetDescription() {
-		assertThat(new LemonTeaProduct().getDescription(), is("LemonTea"));
+		assertThat(new LemonTea().getDescription(), is("LemonTea"));
 	}
 
 	@Test
 	public void testGetCost() {
-		assertThat(new LemonTeaProduct().getCost(), is(30.0));
+		assertThat(new LemonTea().getCost(), is(30.0));
 	}
 
 }

@@ -5,19 +5,19 @@ public class TeaFactory {
 	private static TeaFactory teaFactory = new TeaFactory();
 	
 	public TeaProduct createBlackTeaProduct() {
-		TeaProduct blackTeaProduct = new BlackTeaProduct();
+		TeaProduct blackTeaProduct = new BlackTea();
 		blackTeaProduct.teaRecipe();
 		return blackTeaProduct;
 	}
 	
 	public TeaProduct createGreenTeaProduct() {
-		TeaProduct greenTeaProduct = new GreenTeaProduct();
+		TeaProduct greenTeaProduct = new GreenTea();
 		greenTeaProduct.teaRecipe();
 		return greenTeaProduct;
 	}
 	
 	public TeaProduct createLemonTeaProduct() {
-		TeaProduct lemonTeaProduct = new LemonTeaProduct();
+		TeaProduct lemonTeaProduct = new LemonTea();
 		lemonTeaProduct.teaRecipe();
 		return lemonTeaProduct;
 	}

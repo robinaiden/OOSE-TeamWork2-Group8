@@ -1,6 +1,6 @@
 package singleton_template_factory;
 
-public class LemonTeaProduct extends TeaProduct {
+public class LemonTea extends TeaProduct {
 	
 	public boolean customerWantsSugar() { return false; }
 	
